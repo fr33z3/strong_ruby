@@ -1,5 +1,3 @@
 require "strong_ruby/version"
 
-module StrongRuby
-  # Your code goes here...
-end
+autoload :AbstractClass, 'strong_ruby/abstract_class'
