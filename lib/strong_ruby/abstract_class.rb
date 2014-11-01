@@ -4,6 +4,7 @@ module AbstractClass
     base.instance_variable_set(:@_abstract_methods, [])
     base.send :extend, ClassMethods
     base.send :include, InstanceMethods
+    base.send :include StrongType
   end
 
   module InstanceMethods
