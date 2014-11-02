@@ -1,5 +1,3 @@
-# require 'strong_ruby/strong_type/method_types'
-
 module StrongType
   autoload :MethodTypes, 'strong_ruby/strong_type/method_types'
 
@@ -32,7 +30,9 @@ module StrongType
     end
 
     def inherited(base)
-      base.instance_variable_set(:@__method_types, @__method_types.dup)
+      if @__method_types
+        base.instance_variable_set(:@__method_types, @__method_types.dup)
+      end
     end
 
     private
